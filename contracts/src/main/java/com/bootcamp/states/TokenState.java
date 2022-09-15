@@ -5,6 +5,7 @@ import net.corda.core.contracts.BelongsToContract;
 import net.corda.core.contracts.ContractState;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.identity.Party;
+import net.corda.core.identity.AnonymousParty;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Array;
@@ -18,10 +19,10 @@ import java.util.List;
 public class TokenState implements ContractState{
 
     private Party issuer;
-    private Party owner;
+    private AnonymousParty owner;
     private int amount;
 
-    public TokenState(Party issuer, Party owner, int amount) {
+    public TokenState(Party issuer, AnonymousParty owner, int amount) {
         this.issuer = issuer;
         this.owner = owner;
         this.amount = amount;
@@ -31,7 +32,7 @@ public class TokenState implements ContractState{
         return issuer;
     }
 
-    public Party getOwner() {
+    public AnonymousParty getOwner() {
         return owner;
     }
 

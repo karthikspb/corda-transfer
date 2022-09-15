@@ -1,0 +1,13 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mHow did my parents fight boredom before the internet?
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mI asked my 17 siblings and they didn't know either.
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 4.8.5 (0a21fda) -------------------------------------------------------------
+
+[m
+Logs can be found in                    : /Users/karthik/Infosys/corda/corda-transfer/build/nodes/PartyA/logs
+Running database schema migration scripts ...
+Database migration scripts for core and app schemas complete. There are no outstanding database changes.

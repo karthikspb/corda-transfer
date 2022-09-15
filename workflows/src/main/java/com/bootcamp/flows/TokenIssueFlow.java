@@ -6,10 +6,16 @@ import com.bootcamp.states.TokenState;
 import net.corda.core.flows.*;
 import net.corda.core.identity.CordaX500Name;
 import net.corda.core.identity.Party;
+import net.corda.core.identity.AnonymousParty;
 import net.corda.core.transactions.SignedTransaction;
 import net.corda.core.transactions.TransactionBuilder;
 import net.corda.core.utilities.ProgressTracker;
 import net.corda.core.contracts.CommandData;
+import com.r3.corda.lib.accounts.contracts.states.AccountInfo;
+import com.r3.corda.lib.accounts.workflows.services.AccountService;
+import com.r3.corda.lib.accounts.workflows.flows.RequestKeyForAccount;
+import com.r3.corda.lib.accounts.workflows.services.KeyManagementBackedAccountService;
+
 
 import static java.util.Collections.singletonList;
 
@@ -18,10 +24,11 @@ public class TokenIssueFlow {
     @InitiatingFlow
     @StartableByRPC
     public static class TokenIssueFlowInitiator extends FlowLogic<SignedTransaction> {
-        private final Party owner;
+        //private final AnonymousParty owner;
+        private String owner;
         private final int amount;
 
-        public TokenIssueFlowInitiator(Party owner, int amount) {
+        public TokenIssueFlowInitiator(String owner, int amount) {
             this.owner = owner;
             this.amount = amount;
         }
@@ -37,6 +44,15 @@ public class TokenIssueFlow {
         @Override
         public SignedTransaction call() throws FlowException {
 
+            //grab account service
+            AccountService accountService = getServiceHub().cordaService(KeyManagementBackedAccountService.class);
+            //grab the account information
+//            AccountInfo myAccount = accountService.accountInfo(whoAmI).get(0).getState().getData();
+//            PublicKey myKey = subFlow(new NewKeyForAccount(myAccount.getIdentifier().getId())).getOwningKey();
+
+            AccountInfo targetAccount = accountService.accountInfo(owner).get(0).getState().getData();
+            AnonymousParty targetAcctAnonymousParty = subFlow(new RequestKeyForAccount(targetAccount));
+
             /** Explicit selection of notary by CordaX500Name - argument can by coded in flows or parsed from config (Preferred)*/
             final Party notary = getServiceHub().getNetworkMapCache().getNotary(CordaX500Name.parse("O=Notary,L=London,C=GB"));
             // We get a reference to our own identity.
@@ -47,7 +63,7 @@ public class TokenIssueFlow {
              * ===========================================================================*/
             // We create our new TokenState.
             //TokenState tokenState = null;
-            TokenState tokenState = new TokenState(issuer, owner, amount);
+            TokenState tokenState = new TokenState(issuer, targetAcctAnonymousParty, amount);
 
             /* ============================================================================
              *      TODO 3 - Build our token issuance transaction to update the ledger!
@@ -58,7 +74,7 @@ public class TokenIssueFlow {
 
             CommandData commandData = new TokenContract.Commands.Issue();
 
-            transactionBuilder.addCommand(commandData, issuer.getOwningKey(), owner.getOwningKey());
+            transactionBuilder.addCommand(commandData, issuer.getOwningKey(), targetAcctAnonymousParty.getOwningKey());
 
             transactionBuilder.addOutputState(tokenState, TokenContract.ID);
 
@@ -69,7 +85,7 @@ public class TokenIssueFlow {
             // We check our transaction is valid based on its contracts.
             transactionBuilder.verify(getServiceHub());
 
-            FlowSession session = initiateFlow(owner);
+            FlowSession session = initiateFlow(targetAccount.getHost());
 
             // We sign the transaction with our private key, making it immutable.
             SignedTransaction signedTransaction = getServiceHub().signInitialTransaction(transactionBuilder);
@@ -78,7 +94,7 @@ public class TokenIssueFlow {
             SignedTransaction fullySignedTransaction = subFlow(new CollectSignaturesFlow(signedTransaction, singletonList(session)));
 
             // We get the transaction notarised and recorded automatically by the platform.
-            return subFlow(new FinalityFlow(fullySignedTransaction, singletonList(session)));
+            return subFlow(new FinalityFlow(fullySignedTransaction));
 
         }
     }

@@ -1,0 +1,13 @@
+
+[91m   ______               __
+  / ____/     _________/ /___ _
+ / /     __  / ___/ __  / __ `/         [94mDon't trust atoms.
+[91m/ /___  /_/ / /  / /_/ / /_/ /          [94mThey make up everything.
+[91m\____/     /_/   \__,_/\__,_/[m
+
+[99;1m--- Corda Open Source 4.8.5 (0a21fda) -------------------------------------------------------------
+
+[m
+Logs can be found in                    : /Users/karthik/Infosys/corda/corda-transfer/build/nodes/PartyC/logs
+Running database schema migration scripts ...
+Database migration scripts for core and app schemas complete. There are no outstanding database changes.

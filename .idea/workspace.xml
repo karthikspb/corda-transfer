@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b18625ab-c55c-4450-93e1-d24e2f6138f4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/accountUtilities/CreateNewAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/accountUtilities/NewKeyForAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/accountUtilities/ShareAccountTo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/accountUtilities/ViewInboxByAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/bin/main/com/bootcamp/contracts/TokenContract.class" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/bin/main/com/bootcamp/contracts/TokenContract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/bin/main/com/bootcamp/states/TokenState.class" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/bin/main/com/bootcamp/states/TokenState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/build/libs/contracts-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/build/libs/contracts-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/src/main/java/com/bootcamp/states/TokenState.java" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/src/main/java/com/bootcamp/states/TokenState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/FlowTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowInitiator.class" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowInitiator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowResponder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowResponder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowResponder.class" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow$TokenIssueFlowResponder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenIssueFlow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenTransferFlow$Initiator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenTransferFlow$Responder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/bin/main/com/bootcamp/flows/TokenTransferFlow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/build/libs/workflows-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/build/libs/workflows-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/flows/TokenIssueFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/flows/TokenIssueFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/flows/TokenTransferFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/flows/TokenTransferFlow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +46,14 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -24,14 +61,25 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2CFrmH5tesOpMvJX7C7yT94EtAy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/accountUtilities" />
+      <recent name="$PROJECT_DIR$/workflows/src/main/java/com/bootcamp/flows" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,5 +91,19 @@
       <updated>1658409330427</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
